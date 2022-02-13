@@ -1,0 +1,11 @@
+/* Star Icon */
+.star-icon {
+  width: 15px;
+  height: 14px;
+  padding-right: 5px;
+  fill: #6f7781;
+}
+
+.star-icon:hover {
+  fill: #0969da;
+}

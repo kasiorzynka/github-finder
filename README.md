@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+I had used Material UI for the input field. Material UI is an amazing React UI library that has many awesome components.
+Install Material UI using the following command:
+### `npm install @mui/material`
+
+For the error Module not found: Can't resolve '@emotion/react'
+### `npm install @emotion/react`
+
+For the error Module not found: Can't resolve '@emotion/styled'
+### `npm install @emotion/styled

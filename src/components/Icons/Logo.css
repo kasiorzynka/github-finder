@@ -1,0 +1,14 @@
+/* logo GitHub */
+.logo-git-hub {
+  position: static;
+  width: 38px;
+  height: 38px;
+  margin-left: 20px;
+  margin-top: 17px;
+  fill: white;
+}
+
+.logo-git-hub:hover {
+  fill: grey;
+  cursor: pointer;
+}
