@@ -34,13 +34,13 @@ const App = () => {
                     <div className="results-icon-link">
                       <RepoIcon id="repo-icon" />
                       <a
-                        className="result-link"
+                        className="results-link"
                         href="https://github.com/fockeRR/michalueu-examples"
                       >
                         fockeRR/michalueu-examples
                       </a>
                     </div>
-                    <p className="result-nick-label">
+                    <p className="results-nick-label">
                       Here you find sources for my tutorials on
                     </p>
                     <div className="repo-desc">
@@ -66,13 +66,17 @@ const App = () => {
                     <div className="results-icon-link">
                       <BsPersonCircle className="avatar-img-sm" />
                       <a
-                        className="result-link"
+                        className="results-link"
                         href="https://github.com/MichalPaszkiewicz"
                       >
                         Michal Paszkiewicz
                       </a>
                     </div>
-                    <p className="result-nick-label">MichalPaszkiewicz</p>
+                    <p className="results-nick-label">MichalPaszkiewicz</p>
+                    <p className="user-desc">
+                      Just a guy who likes to make things @MichalYouDoing
+                    </p>
+                    <p className="user-location">London, England</p>
                   </div>
                 </div>
               </div>

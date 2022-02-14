@@ -108,7 +108,7 @@ form {
   position: absolute;
 }
 
-.result-link {
+.results-link {
   /* Link */
   position: static;
   width: 216px;
@@ -125,7 +125,7 @@ form {
   margin-left: 28px;
 }
 
-.result-nick-label {
+.results-nick-label {
   /* nick */ /* Label */
   position: static;
   margin-left: 27px;
@@ -182,7 +182,7 @@ form {
 }
 
 .repo-update-licence {
-  font-family: Roboto;
+  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
@@ -192,4 +192,24 @@ form {
   /* Grayscale/ Dark Gray 1 */
   color: #6f7781;
   margin: 0px 3px;
+}
+
+.user-desc {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  /* Grayscale/Darkest Gray */
+  color: #24292f;
+  margin: 8px 0px 8px 27px;
+}
+
+.user-location {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  /* Grayscale/Dark Gray 2 */
+  color: #6f7781;
+  margin: 8px 0px 8px 27px;
 }
