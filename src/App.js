@@ -1,7 +1,8 @@
 //import TextField from "@mui/material/TextField";
 //import Navbar from "./components/Navbar/Navbar";
+import ResultsUser from "./components/FindResultsList/ResultsUser";
 import Logo from "./components/Icons/Logo";
-import { BsPersonCircle } from "react-icons/bs";
+import { BsPersonCircle } from "react-icons/bs"; //placeholder for user image
 import RepoIcon from "./components/Icons/RepoIcon";
 import StarIcon from "./components/Icons/StarIcon";
 import "./App.css";
@@ -60,24 +61,7 @@ const App = () => {
                       </span>
                     </div>
                   </div>
-
-                  <hr className="results-sep" />
-                  <div className="results-user">
-                    <div className="results-icon-link">
-                      <BsPersonCircle className="avatar-img-sm" />
-                      <a
-                        className="results-link"
-                        href="https://github.com/MichalPaszkiewicz"
-                      >
-                        Michal Paszkiewicz
-                      </a>
-                    </div>
-                    <p className="results-nick-label">MichalPaszkiewicz</p>
-                    <p className="user-desc">
-                      Just a guy who likes to make things @MichalYouDoing
-                    </p>
-                    <p className="user-location">London, England</p>
-                  </div>
+                  <ResultsUser />
                 </div>
               </div>
             </header>
