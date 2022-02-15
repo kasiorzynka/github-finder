@@ -1,18 +1,55 @@
-# Getting Started with Create React App
+#Github Finder App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+App to search Github users and repositories and displays their basic info. It has one subpage with profile of chosen user. 
 
-## Available Scripts
+##Usage
+
+Rename **_.env.example_** to **_.env_**
+
+You can use the Github API without a personal token, but if you want to use your token, add it to the .env file
+
+Learn how to create a token [here](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+
+
+## Install Dependencies
+
+```
+npm install
+```
+
+### `npm install axios`
+
+I had used Material UI for the input field. Material UI is an amazing React UI library that has many awesome components.
+Install Material UI using the following command:
+### `npm install @mui/material`
+
+For the error Module not found: Can't resolve '@emotion/react'
+### `npm install @emotion/react`
+
+For the error Module not found: Can't resolve '@emotion/styled'
+### `npm install @emotion/styled
+
 
 In the project directory, you can run:
 
-### `npm start`
+### Run
+
+```
+npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
 
 ### `npm test`
 
@@ -68,13 +105,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-I had used Material UI for the input field. Material UI is an amazing React UI library that has many awesome components.
-Install Material UI using the following command:
-### `npm install @mui/material`
-
-For the error Module not found: Can't resolve '@emotion/react'
-### `npm install @emotion/react`
-
-For the error Module not found: Can't resolve '@emotion/styled'
-### `npm install @emotion/styled

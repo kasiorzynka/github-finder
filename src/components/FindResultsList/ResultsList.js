@@ -15,7 +15,6 @@ const ResultsList = () => {
         <h1 className="results-counter">2,383 results</h1>
         <div className="results-container">
           <ResultsGetData findtype={findType} findpath={findpath} />
-          {/* TODO change findpath for real path */}
         </div>
       </header>
     </div>
@@ -23,3 +22,5 @@ const ResultsList = () => {
 };
 
 export default ResultsList;
+
+/* TODO change findpath for real path */

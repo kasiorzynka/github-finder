@@ -1,4 +1,4 @@
-//import RepoLanguagesGetData from "./RepoLanguagesGetData";
+import RepoLanguagesGetData from "./RepoLanguagesGetData";
 import RepoIcon from "../Icons/RepoIcon";
 import StarIcon from "../Icons/StarIcon";
 import "./ResultsRepo.css";
@@ -64,7 +64,7 @@ const ResultsRepo = (props) => {
                   style={{ backgroundColor: "#ab7b3f" }}
                 ></span>
                 <span className="repo-lang-name">
-                  {/*<RepoLanguagesGetData langurl={item.languages_url} />*/}
+                  <RepoLanguagesGetData langurl={item.languages_url} />
                 </span>
                 {/*tablica ze wszystkimi językami/*/}
                 <span className="repo-update">Updated on 22 Aug 2016</span>

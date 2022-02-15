@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import ResultsRepo from "./ResultsRepo";
 import ResultsUser from "./ResultsUser";
 
+const GITHUB_URL = process.env.REACT_APP_GITHUB_URL;
+const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
+
 const ResultsGetData = (props) => {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -9,7 +12,11 @@ const ResultsGetData = (props) => {
 
   // Note: the empty deps array [] means this useEffect will run once similar to componentDidMount()
   useEffect(() => {
-    fetch(`https://api.github.com/${props.findpath}`)
+    fetch(`${GITHUB_URL}${props.findpath}?q=postman&page=2&per_page=5`, {
+      headers: {
+        Authorization: `token ${GITHUB_TOKEN}`,
+      },
+    }) //?page=20&per_page=5
       .then((res) => res.json())
       .then(
         (result) => {
