@@ -1,3 +1,10 @@
+.avatar-img-sm {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+}
+
 .user-desc {
   font-family: Roboto, sans-serif;
   font-style: normal;

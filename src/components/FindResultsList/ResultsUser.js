@@ -1,12 +1,7 @@
-import { useState, useEffect } from "react";
 import "./ResultsUser.css";
 import { BsPersonCircle } from "react-icons/bs";
 
-const ResultsUser = () => {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState([]);
-
+const ResultsUser = (props) => {
   //User layout example
   const dummyContent = (
     <>
@@ -30,56 +25,44 @@ const ResultsUser = () => {
     </>
   );
 
-  // Note: the empty deps array [] means this useEffect will run once similar to componentDidMount()
-  useEffect(() => {
-    fetch("https://api.github.com/users")
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setItems(result);
-        },
-        // Note: it's important to handle errors here instead of a catch() block so that we don't swallow exceptions from actual bugs in components.
-        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      );
-  }, []);
+  return (
+    <>
+      {dummyContent}
+      {props.users.map((item) => (
+        <>
+          <hr className="results-sep" />
 
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  } else if (!isLoaded) {
-    return <div>Loading...</div>;
-  } else {
-    return (
-      <>
-        {dummyContent}
-        {items.map((item) => (
-          <>
-            <hr className="results-sep" />
-
-            <div className="results-user">
-              <div className="results-icon-link">
-                <BsPersonCircle className="avatar-img-sm" />
+          <div className="results-user">
+            <div className="results-icon-link">
+              {
+                item.avatar_url ? (
+                  <img
+                    className="avatar-img-sm"
+                    src={
+                      item.avatar_url + "&s=40"
+                    } /*Minimalize image before render on page*/
+                    alt="User avatar image"
+                  />
+                ) : (
+                  <BsPersonCircle className="avatar-img-sm" />
+                )
+                /*Placeholder*/
+              }
+              {item.name && (
                 <a className="results-link" href={item.html_url}>
-                  {item.name} {item.avatar_url}
+                  {item.name}
                 </a>
-              </div>
-              <p className="results-nick-label">{item.login}</p>
-              {item.bio && (
-                <p className="user-desc">
-                  Just a guy who likes to make things @MichalYouDoing
-                </p>
               )}
-
-              <p className="user-location">London, England</p>
             </div>
-          </>
-        ))}
-      </>
-    );
-  }
+            {/*Required input*/}
+            <p className="results-nick-label">{item.login}</p>
+            {item.bio && <p className="user-desc">{item.bio}</p>}
+            {item.location && <p className="user-location">{item.location}</p>}
+          </div>
+        </>
+      ))}
+    </>
+  );
 };
 
 export default ResultsUser;
