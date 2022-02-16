@@ -14,63 +14,6 @@
   row-gap: 20px;
 }
 
-/* Menu */
-.nav-container {
-  width: 100%;
-  width: 100vw;
-  /* Grayscale/Darkest Gray */
-  background-color: #24292f;
-}
-.nav {
-  /* Auto layout */
-  align-items: center;
-  height: 72px;
-  margin: 0 auto;
-}
-
-/* Button search closed/Default/Closed/Mobile2 */
-/*position: static;
-
-*/
-form {
-  display: inline;
-}
-
-.search-container {
-  width: 242px;
-  height: 37px;
-  margin-top: 17px;
-  margin-right: 20px;
-  float: right;
-  /* Grayscale/ Light Gray 3 */
-  border: 1px solid #d0d7de;
-  border-radius: 5px;
-  cursor: text;
-}
-
-.search {
-  /* Search */
-  position: absolute;
-  padding-top: 6px;
-  padding-bottom: 7px;
-  padding-left: 17px;
-  font-family: "Segoe UI", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  text-decoration: none;
-  align-items: center;
-  cursor: text;
-
-  /* Grayscale/ Light Gray 3 */
-  color: #d0d7de;
-  background-color: transparent;
-}
-.search:active {
-  border: none;
-}
-
 .main-container {
   max-width: 950px;
   align-items: center;
