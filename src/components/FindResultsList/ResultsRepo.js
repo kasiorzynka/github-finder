@@ -32,7 +32,7 @@ const ResultsRepo = (props) => {
             ></span>
             <span className="repo-lang-name">Java</span>
             <span className="repo-update">Updated on 22 Aug 2016</span>
-            <span className="repo-licence">MIT license</span>
+            <span className="repo-license">MIT license</span>
           </span>
         </div>
       </div>
@@ -42,34 +42,47 @@ const ResultsRepo = (props) => {
   return (
     <>
       {dummyContent}
-      {props.repos.map((item) => (
+      {props.repos.items?.map((item) => (
         <>
           <hr className="results-sep" />
           <div className="results-repo">
             <div className="results-icon-link">
               <RepoIcon id="repo-icon" />
-              <a className="results-link" href={item.html_url}>
-                {item.full_name}
-              </a>
+              {item.html_url && (
+                <a className="results-link" href={item.html_url}>
+                  {item.full_name}
+                </a>
+              )}
             </div>
-            <p className="results-nick-label">{item.description}</p>
+            {item.description && (
+              <p className="results-nick-label">{item.description}</p>
+            )}
             <div className="repo-desc">
-              <a className="stars-number" href={item.stargazers_url}>
-                <StarIcon />
-                {item.stargazers_url.length}
-              </a>
-              <span className="repo-lang">
-                <span
-                  className="repo-lang-color"
-                  style={{ backgroundColor: "#ab7b3f" }}
-                ></span>
-                <span className="repo-lang-name">
-                  <RepoLanguagesGetData langurl={item.languages_url} />
+              {item.stargazers_count && item.stargazers_url && (
+                <a className="stars-number" href={item.stargazers_url}>
+                  <StarIcon />
+                  {item.stargazers_count}
+                </a>
+              )}
+              {item.languages_url && (
+                <span className="repo-lang">
+                  <span
+                    className="repo-lang-color"
+                    style={{ backgroundColor: "#ab7b3f" }}
+                  ></span>
+                  <span className="repo-lang-name">
+                    <RepoLanguagesGetData langurl={item.languages_url} />
+                  </span>
                 </span>
-                {/*tablica ze wszystkimi językami/*/}
-                <span className="repo-update">Updated on 22 Aug 2016</span>
-                <span className="repo-licence">{item.license}</span>
-              </span>
+              )}
+              {item.updated_at && (
+                <span className="repo-update">
+                  Updated on {item.updated_at}
+                </span>
+              )}
+              {item.license && (
+                <span className="repo-license">{item.license.name}</span>
+              )}
             </div>
           </div>
         </>
@@ -79,3 +92,7 @@ const ResultsRepo = (props) => {
 };
 
 export default ResultsRepo;
+/*
+TODO tablica ze wszystkimi językami/
+TODO item.languages_url zawsze zwraca url, więc trzeba najpierw pobrać język przez komponent i zależnie od wyniku generować ten span
+ */

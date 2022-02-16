@@ -28,7 +28,7 @@ const ResultsUser = (props) => {
   return (
     <>
       {dummyContent}
-      {props.users.map((item) => (
+      {props.users?.map((item) => (
         <>
           <hr className="results-sep" />
 

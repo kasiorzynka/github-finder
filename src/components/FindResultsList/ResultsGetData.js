@@ -12,11 +12,15 @@ const ResultsGetData = (props) => {
 
   // Note: the empty deps array [] means this useEffect will run once similar to componentDidMount()
   useEffect(() => {
-    fetch(`${GITHUB_URL}${props.findpath}?q=postman&page=2&per_page=5`, {
-      headers: {
-        Authorization: `token ${GITHUB_TOKEN}`,
-      },
-    }) //?page=20&per_page=5
+    //fetch(`${GITHUB_URL}${props.findpath}`, {
+    fetch(
+      `https://api.github.com/search/repositories?q=postman&order=desc&per_page=4&page=1`,
+      {
+        headers: {
+          Authorization: `token ${GITHUB_TOKEN}`,
+        },
+      }
+    ) //?page=20&per_page=5
       .then((res) => res.json())
       .then(
         (result) => {
