@@ -1,0 +1,14 @@
+/* Menu */
+.nav-container {
+  width: 100%;
+  width: 100vw;
+  /* Grayscale/Darkest Gray */
+  background-color: #24292f;
+}
+
+.nav {
+  /* Auto layout */
+  align-items: center;
+  height: 72px;
+  margin: 0 auto;
+}
