@@ -1,0 +1,26 @@
+.avatar-img-sm {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.user-desc {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  /* Grayscale/Darkest Gray */
+  color: #24292f;
+  margin: 8px 0px 8px 27px;
+}
+
+.user-location {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  /* Grayscale/Dark Gray 2 */
+  color: #6f7781;
+  margin: 8px 0px 8px 27px;
+}
