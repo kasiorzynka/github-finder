@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Search from "../SearchEngine/Search";
 import Logo from "../Icons/Logo";
 import "./Navbar.css";
@@ -9,7 +10,9 @@ const Navbar = () => {
         <div className="nav-container">
           <div className="nav">
             <div className="wrapper">
-              <Logo />
+              <Link to={"/"}>
+                <Logo />
+              </Link>
               <Search />
             </div>
           </div>

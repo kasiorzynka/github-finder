@@ -18,7 +18,7 @@ const ResultsRepo = (props) => {
             fockeRR/michalueu-examples
           </a>
         </div>
-        <p className="results-nick-label">
+        <p className="results-label">
           Here you find sources for my tutorials on
         </p>
         <div className="repo-desc">
@@ -55,7 +55,7 @@ const ResultsRepo = (props) => {
               )}
             </div>
             {item.description && (
-              <p className="results-nick-label">{item.description}</p>
+              <p className="results-label">{item.description}</p>
             )}
             <div className="repo-desc">
               {item.stargazers_count && item.stargazers_url && (
